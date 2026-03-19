@@ -1,4 +1,4 @@
-## 🔍 Thought Process
+## Thought Process
 
 The recurrence relation immediately stood out as a Linear Congruential Generator (LCG):
 
@@ -8,7 +8,7 @@ Since multiple outputs (x₁ through x₄) were provided, I recognized that the 
 
 ---
 
-## ⚙️ Solution Strategy
+## Solution Strategy
 
 Using the known outputs, I computed:
 
@@ -20,7 +20,7 @@ Once `x₅` was derived, I converted it into bytes and used it as a repeating XO
 
 ---
 
-## 🧠 Why This Works
+## Why This Works
 
 LCGs are deterministic and predictable. Because the modulus and several outputs were known, the internal state of the generator could be reconstructed.
 
