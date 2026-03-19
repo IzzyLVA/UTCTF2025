@@ -1,0 +1,54 @@
+# **Thought Process**
+
+
+
+The recurrence relation immediately stood out as a Linear Congruential Generator (LCG):
+
+
+
+xₙ₊₁ = (a·xₙ + c) mod 2³²
+
+
+
+Since multiple outputs (x₁ through x₄) were provided, I recognized that the generator parameters `a` and `c` could be recovered. LCGs are not cryptographically secure, and given enough outputs, future values can be predicted.
+
+
+
+\---
+
+
+
+### **Solution Strategy**
+
+
+
+Using the known outputs, I computed:
+
+
+
+\- The multiplier `a` using modular inverse
+
+\- The increment `c`
+
+\- The next value `x₅`, which is used as the XOR key
+
+
+
+Once `x₅` was derived, I converted it into bytes and used it as a repeating XOR key to decrypt the ciphertext.
+
+
+
+\---
+
+
+
+**Why This Works**
+
+---
+
+LCGs are deterministic and predictable. Because the modulus and several outputs were known, the internal state of the generator could be reconstructed.
+
+
+
+Since the encryption relied on a predictable PRNG output, the XOR key was effectively exposed, making decryption trivial.
+
