@@ -1,13 +1,13 @@
-# 🔐 UTCTF 2025 – Cryptography Writeups
+# UTCTF 2025 – Cryptography Writeups
 
-## 📌 Overview
+## Overview
 This repository contains my writeups for cryptography challenges from **UTCTF 2025**.
 
 The goal of these writeups is to document not just the solutions, but the **thought process, vulnerabilities, and cryptographic concepts** behind each challenge.
 
 ---
 
-## 🧠 Challenges Covered
+## Challenges Covered
 
 ### 1. Fortune Teller (LCG Prediction)
 - **Concepts:** Linear Congruential Generators, XOR encryption  
@@ -23,7 +23,7 @@ The goal of these writeups is to document not just the solutions, but the **thou
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 - Python  
 - `sympy` (discrete logarithms)  
 - `Crypto.Util.number` (modular arithmetic)  
@@ -31,7 +31,7 @@ The goal of these writeups is to document not just the solutions, but the **thou
 
 ---
 
-## 🚀 Key Takeaways
+## Key Takeaways
 Across these challenges, I learned:
 
 - Weak random number generators (like LCGs) are predictable  
